@@ -36,41 +36,56 @@
         >
           <v-card variant="text">
             <v-card-item class="py-0 pb-2" v-for="details in preview.items">
-              <v-card-title class="py-0 pb-1">{{ details.title }}</v-card-title>
-              <v-card-text class="py-0 px-0" style="white-space: pre-line">{{
-                details.des
-              }}</v-card-text>
+              <v-card-title class="py-0 pb-1 text-h5">{{
+                details.title
+              }}</v-card-title>
+              <v-card-text
+                class="py-0 px-0 text-body-1"
+                style="white-space: pre-line"
+                >{{ details.des }}</v-card-text
+              >
               <!--  -->
               <v-card-text class="py-1 px-0" v-if="details.Legs_aluminum"
                 >Legs in casted aluminum.
               </v-card-text>
               <!-- dimensions : -->
               <v-card-item class="px-0" v-if="details.dimensions">
-                <v-card-text class="py-0 px-0">dimensions:</v-card-text>
+                <v-card-text class="py-0 px-0 text-body-1 font-weight-bold"
+                  >Dimensions:</v-card-text
+                >
                 <v-card-text
-                  class="py-0 px-0"
+                  class="py-0 px-0 text-body-1"
                   v-for="dimension in details.dimensions"
                 >
                   {{ dimension }}</v-card-text
                 >
               </v-card-item>
               <!-- Dimensions with -->
-              <v-card-item class="py-1 px-0" v-if="details.dimensions_with">
+              <v-card-item
+                class="py-1 px-0 text-body-1"
+                v-if="details.dimensions_with"
+              >
                 <v-card-item
-                  class="py-2 px-0"
+                  class="py-2 px-0 text-body-1"
                   v-for="(dimension_with, index) in details.dimensions_with"
                   :key="index"
                 >
-                  <v-card-text class="py-0 px-0"
+                  <v-card-text class="py-0 px-0 text-body-1"
                     >Dimensions with :
                   </v-card-text>
-                  <v-card-text class="py-0 px-0" v-for="item in dimension_with">
+                  <v-card-text
+                    class="py-0 px-0 text-body-1"
+                    v-for="item in dimension_with"
+                  >
                     {{ item }}
                   </v-card-text>
                 </v-card-item>
               </v-card-item>
               <!-- angular_shape  -->
-              <v-card-text class="py-0 px-0" v-if="details.angular_shape">
+              <v-card-text
+                class="py-0 px-0 text-body-1"
+                v-if="details.angular_shape"
+              >
                 Also available in angular shape with composition upon space
                 avaibility.
               </v-card-text>
