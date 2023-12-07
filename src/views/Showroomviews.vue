@@ -1,8 +1,8 @@
 <template>
   <v-sheet>
     <v-card
-      class="d-flex align-center justify-center grayscale-image"
-      image="/ourShowroom.png"
+      class="d-flex align-center justify-center"
+      image="/sm.jpg"
       :height="400"
     >
       <v-card-title
@@ -27,8 +27,8 @@
             :to="{ name: 'products', params: { name: category.name } }"
           >
             <v-card variant="text" :height="250" class="d-flex align-start">
-              <!-- <v-img cover height="250" :src="category.url"></v-img> -->
-              <img :src="category.url" class="img" alt="" />
+              <v-img height="250" :src="category.url"></v-img>
+              <!-- <img :src="category.url" class="img" alt="" /> -->
             </v-card>
             <v-card-title class="text-wrap" align="center"
               ><h3 class="text-h6 font-weight-bold text-capitalize">
@@ -75,7 +75,7 @@ export default {
   height: 250px;
 }
 .grayscale-image {
-  filter: grayscale(100%);
+  filter: brightness(30%);
 }
 .img {
   width: 100%;

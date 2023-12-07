@@ -100,7 +100,7 @@
         <v-row class="ma-0 pa-0">
           <v-col cols="12" sm="6" md="4" v-for="item in data">
             <v-card variant="text" :height="250" @click="previewHandler(item)">
-              <!-- <v-img cover :height="250" :src="item.url" :alt="item.name">
+              <v-img  :height="250" :src="item.url" :alt="item.name">
                 <template v-slot:placeholder>
                   <div class="d-flex align-center justify-center fill-height">
                     <v-progress-circular
@@ -109,8 +109,8 @@
                     ></v-progress-circular>
                   </div>
                 </template>
-              </v-img> -->
-              <img :src="item.url" class="img" alt="" />
+              </v-img>
+              <!-- <img :src="item.url" class="img" alt="" /> -->
             </v-card>
           </v-col>
         </v-row>
