@@ -26,10 +26,10 @@
             @click="prodectHandler(category)"
             :to="{ name: 'products', params: { name: category.name } }"
           >
-            <v-card variant="text" hight="350" class="d-flex align-start">
-              <v-img cover height="250" :src="category.url"></v-img>
+            <v-card variant="text" :height="250" class="d-flex align-start">
+              <!-- <v-img cover height="250" :src="category.url"></v-img> -->
+              <img :src="category.url" class="img" alt="" />
             </v-card>
-
             <v-card-title class="text-wrap" align="center"
               ><h3 class="text-h6 font-weight-bold text-capitalize">
                 {{ category.name }}
@@ -76,5 +76,9 @@ export default {
 }
 .grayscale-image {
   filter: grayscale(100%);
+}
+.img {
+  width: 100%;
+  height: 100%;
 }
 </style>
