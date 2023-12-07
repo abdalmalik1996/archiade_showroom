@@ -1,11 +1,15 @@
 <template>
   <v-sheet>
     <v-card
-      class="d-flex align-center justify-center"
+      class="d-flex align-center justify-center grayscale-image"
       image="/ourShowroom.png"
-      :height="300"
+      :height="400"
     >
-      <v-card-title><h3 class="text-h3 text-white">Showroom</h3></v-card-title>
+      <v-card-title
+        ><h3 class="text-h3 text-white text-uppercase">
+          Showroom
+        </h3></v-card-title
+      >
     </v-card>
     <v-container>
       <v-row>
@@ -22,9 +26,12 @@
             @click="prodectHandler(category)"
             :to="{ name: 'products', params: { name: category.name } }"
           >
-            <v-img :height="250" cover :src="category.url"></v-img>
+            <v-card variant="text" hight="350" class="d-flex align-start">
+              <v-img cover height="250" :src="category.url"></v-img>
+            </v-card>
+
             <v-card-title class="text-wrap" align="center"
-              ><h3 class="text-h6 font-weight-bold">
+              ><h3 class="text-h6 font-weight-bold text-capitalize">
                 {{ category.name }}
               </h3></v-card-title
             >
@@ -62,4 +69,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.custom-image img {
+  width: 100%;
+  height: 250px;
+}
+.grayscale-image {
+  filter: grayscale(100%);
+}
+</style>

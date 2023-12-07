@@ -12,7 +12,7 @@
         <v-main>
           <v-sheet>
             <v-card variant="text" class="px-3">
-              <v-img cover :height="550" :src="preview.url" :alt="preview.name">
+              <v-img :height="550" :src="preview.url" :alt="preview.name">
                 <template v-slot:placeholder>
                   <div class="d-flex align-center justify-center fill-height">
                     <v-progress-circular
@@ -99,7 +99,7 @@
       <v-sheet>
         <v-row class="ma-0 pa-0">
           <v-col cols="12" sm="6" md="4" v-for="item in data">
-            <v-card :height="250" @click="previewHandler(item)">
+            <v-card variant="text" :height="250" @click="previewHandler(item)">
               <v-img cover :height="250" :src="item.url" :alt="item.name">
                 <template v-slot:placeholder>
                   <div class="d-flex align-center justify-center fill-height">
