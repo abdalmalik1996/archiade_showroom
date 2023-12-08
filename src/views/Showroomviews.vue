@@ -1,14 +1,13 @@
 <template>
   <v-sheet>
     <v-card
-      class="d-flex align-center justify-center"
+      class="d-flex align-center justify-center position-relative"
       image="/sm.jpg"
-      :height="400"
+      :height="230"
     >
-      <v-card-title
-        ><h3 class="text-h3 text-white text-uppercase">
-          Showroom
-        </h3></v-card-title
+      <div class="shade"></div>
+      <v-card-title style="z-index: 200"
+        ><h3 class="text-white text-uppercase font">Showroom</h3></v-card-title
       >
     </v-card>
     <v-container>
@@ -70,6 +69,8 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
+
 .custom-image img {
   width: 100%;
   height: 250px;
@@ -80,5 +81,25 @@ export default {
 .img {
   width: 100%;
   height: 100%;
+}
+.font {
+  font-family: "helvetica-w01-bold", "Helvetica Neue", Helvetica, Arial,
+    sans-serif !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: bold !important;
+  font-size: 45px !important;
+  line-height: 1.4em !important;
+  /* font-family: helvetica-w01-bold, helvetica-w02-bold, helvetica-lt-w10-bold,
+    sans-serif !important; */
+}
+.shade {
+  height: 230px;
+  background-color: rgba(0, 0, 0, 0.728);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
 }
 </style>
