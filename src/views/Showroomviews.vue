@@ -69,8 +69,6 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap");
-
 .custom-image img {
   width: 100%;
   height: 250px;
@@ -90,8 +88,6 @@ export default {
   font-weight: bold !important;
   font-size: 45px !important;
   line-height: 1.4em !important;
-  /* font-family: helvetica-w01-bold, helvetica-w02-bold, helvetica-lt-w10-bold,
-    sans-serif !important; */
 }
 .shade {
   height: 230px;
