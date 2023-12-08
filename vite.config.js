@@ -31,7 +31,9 @@ export default defineConfig({
         ],
       },
     }),
-    VitePWA(),
+    VitePWA({
+      registerType: "autoUpdate",
+    }),
   ],
   define: { "process.env": {} },
   resolve: {
